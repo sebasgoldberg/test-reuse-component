@@ -29,6 +29,6 @@
   },
   "dependencies": {
     "external-libs": "^0.1.1",
-    "test-external-libs": "^0.1.0"
+    "test-external-libs": "^0.1.1"
   }
 }

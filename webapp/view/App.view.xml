@@ -10,6 +10,7 @@
 				id="page"
 				title="{i18n>title}">
 				<content>
+                    <Input value="{/buttonText}" />
                     <core:ComponentContainer propagateModel="true" usage="myreuse" async="true"></core:ComponentContainer>
                 </content>
 			</Page>
