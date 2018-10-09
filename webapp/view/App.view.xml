@@ -1,6 +1,7 @@
 <mvc:View
 	controllerName="iamsoft.test.component.reuse.controller.App"
 	xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
 	displayBlock="true"
 	xmlns="sap.m">
 	<App>
@@ -8,7 +9,9 @@
 			<Page
 				id="page"
 				title="{i18n>title}">
-				<content></content>
+				<content>
+                    <core:ComponentContainer propagateModel="true" usage="myreuse" async="true"></core:ComponentContainer>
+                </content>
 			</Page>
 		</pages>
 	</App>

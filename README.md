@@ -1,5 +1,41 @@
-# openui5-basic-template-app
-This is a basic app template which you can use as a starting point to build OpenUI5 apps.
+# SAPUI5 Component Reuse Test
+
+## Intro
+This is a test app to verify the mechanism to reuse components.
+
+To resuse a component is necessary to:
+- Add its source in `webapp/index.html` using attr data-sap-ui-resourceroots (Only in dev env, this is not necessary in SAP App Server):
+```html
+    <script id="sap-ui-bootstrap"
+        src="https://sapui5.hana.ondemand.com/1.52.13/resources/sap-ui-core.js"
+        data-sap-ui-libs="sap.m,iamsoft.libs.external.polyfill"
+        data-sap-ui-theme="sap_belize"
+        data-sap-ui-compatVersion="edge"
+        data-sap-ui-preload="async"
+        data-sap-ui-resourceroots='{
+                "iamsoft.test.component.reuse": "./",
+                "iamsoft.libs.external.polyfill": "resources/external-libs/dist/",
+                "iamsoft.test.lib": "resources/test-external-libs/dist/"
+                }'>
+    </script>
+```
+In this case `Gruntfile.js` contains a mapping between resorces and node_modules.
+
+- Declare component usage in `manifest.js` and give it a name:
+```json
+    "componentUsages": {
+        "myreuse": {
+            "name": "iamsoft.test.lib",
+            "settings": {},
+            "componentData": {}
+        }
+    }
+```
+
+- Encapsulate its usage in a view, using a ComponentContaine:
+```xml
+    <core:ComponentContainer propagateModel="true" usage="myreuse" async="true"></core:ComponentContainer>
+```
 
 ## Getting started
 
