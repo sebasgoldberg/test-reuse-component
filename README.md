@@ -51,7 +51,7 @@ npm install grunt-cli -g
 3.Clone the repository and navigate into it
 
 ```sh
-git clone https://github.com/sebasgoldberg/openui5-basic-template-app.git
+git clone https://github.com/sebasgoldberg/test-reuse-component.git
 cd openui5-basic-template-app
 ```
 
