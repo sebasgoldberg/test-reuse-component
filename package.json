@@ -28,6 +28,7 @@
     "load-grunt-tasks": "^4.0.0"
   },
   "dependencies": {
-    "external-libs": "^0.1.1"
+    "external-libs": "^0.1.1",
+    "test-external-libs": "^0.1.0"
   }
 }
