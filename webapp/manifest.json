@@ -42,7 +42,8 @@
 			"libs": {
 				"sap.ui.core": {},
 				"sap.m": {},
-				"sap.ui.layout": {}
+				"sap.ui.layout": {},
+                "iamsoft.libs.external.polyfill": {}
 			}
 		},
 		"contentDensities": {

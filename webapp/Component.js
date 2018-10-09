@@ -2,12 +2,16 @@ import UIComponent from "sap/ui/core/UIComponent";
 import models from "sap/ui/demo/basicTemplate/model/models";
 
 /*eslint no-unused-vars: ["error", { "varsIgnorePattern": "polyfill" }]*/
-import polyfill from "sap/ui/demo/basicTemplate/lib/polyfill";
+//import polyfill from "sap/ui/demo/basicTemplate/lib/polyfill";
 
 export default UIComponent.extend("sap.ui.demo.basicTemplate.Component", {
 
     metadata: {
         manifest: "json"
+    },
+
+    test: async function() {
+        await new Promise( resolve => setTimeout( () => resolve(), 100 ) );
     },
 
     /**
@@ -22,6 +26,8 @@ export default UIComponent.extend("sap.ui.demo.basicTemplate.Component", {
 
         // set the device model
         this.setModel(models.createDeviceModel(), "device");
+
+        this.test();
     }
 
 });
